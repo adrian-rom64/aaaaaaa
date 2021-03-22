@@ -1,14 +1,13 @@
 import * as actions from './actions'
 
 const initialState = {
-  counter: 0,
-  a: 1
+  token: null
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case actions.INCREMENT:
-      return { ...state, counter: state.counter + 1 }
+    case actions.SET_TOKEN:
+      return { ...state, token: action.token }
     default:
       return state
   }
